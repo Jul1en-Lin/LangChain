@@ -3,10 +3,10 @@ from langchain_core.messages import SystemMessage, HumanMessage
 from langchain_core.output_parsers import StrOutputParser
 from langchain_google_genai import ChatGoogleGenerativeAI
 
-# 需要设置代理
-proxy_url = "http://127.0.0.1:7897"
-os.environ["http_proxy"] = proxy_url
-os.environ["https_proxy"] = proxy_url
+# # 需要设置代理
+# proxy_url = "http://127.0.0.1:7897"
+# os.environ["http_proxy"] = proxy_url
+# os.environ["https_proxy"] = proxy_url
 
 
 # 1. 定义Gemini模型
