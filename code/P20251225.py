@@ -21,15 +21,16 @@ from langchain_google_genai import ChatGoogleGenerativeAI
 # )
 
 model = ChatGoogleGenerativeAI(
-    model="gemini-2.5-flash"
+    model="gemini-2.5-flash",
+    temperature=0.2
 )
 
 # 2. 定义消息
 messages = [
-    SystemMessage(content="请补全一段故事，100个字以内："),
-    HumanMessage(content="一只猫正在__？")
+    SystemMessage(content="你是一名学习信号与系统专业的大学生，现在需要你完成关于该专业的作业"),
+    HumanMessage(content="提供一份思政体会:涉及到与本课程的科学思想方法，科学精神，国家建设中与本课程有关的案例等，要求字数500字左右")
 ]
-print(model.invoke(messages))
+print(model.invoke(messages).content)
 
 
 # # 3. 定义输出解析器组件
