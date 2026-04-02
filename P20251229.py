@@ -40,9 +40,7 @@ result = model.invoke(
     input = messages,
     config={
         "configurable" : {
-            "first_max_tokens" : 10,
-            # "first_model": "deepseek-chat",
-            # "first_model_provider": "deepseek",
+            "first_max_tokens" : 10
         }
     }
 )
